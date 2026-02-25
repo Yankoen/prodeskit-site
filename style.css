@@ -83,18 +83,39 @@ main {
   gap: 0.75rem;
 }
 
+.brand-link {
+  cursor: pointer;
+  border-radius: 14px;
+  padding: 0.25rem 0.35rem;
+  margin-left: -0.35rem;
+  transition: background var(--transition-fast), transform 120ms ease-out;
+}
+
+.brand-link:hover {
+  background: rgba(15, 23, 42, 0.55);
+  transform: translateY(-1px);
+}
+
 .brand-mark {
   position: relative;
   width: 44px;
-  height: 40px;
+  height: 44px;
   border-radius: 999px;
-  padding: 2px;
-  background: radial-gradient(circle at 15% 10%, #a5f3fc, #38bdf8 35%, #4f46e5 70%, #0f172a 100%);
+  padding: 0;
+  background: transparent;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: white;
-  box-shadow: 0 10px 26px rgba(56, 189, 248, 0.65);
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.35);
+}
+
+.brand-logo {
+  display: block;
+  width: 44px;
+  height: 44px;
+  filter: drop-shadow(0 10px 22px rgba(34, 197, 94, 0.22))
+    drop-shadow(0 10px 22px rgba(56, 189, 248, 0.18));
 }
 
 .brand-mark-main {
@@ -309,6 +330,53 @@ main {
   white-space: nowrap;
 }
 
+.btn-small {
+  padding: 0.5rem 1rem;
+  font-size: 0.86rem;
+}
+
+.nav-support {
+  display: inline-flex;
+}
+
+.muted {
+  color: var(--fg-muted);
+  font-size: 0.92rem;
+  margin: 0.4rem 0 0.9rem;
+}
+
+.support-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.support-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.55rem;
+  color: var(--fg-muted);
+  font-size: 0.9rem;
+}
+
+.support-list li::before {
+  content: '✓';
+  color: #22c55e;
+  margin-right: 0.45rem;
+}
+
+.support-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.9rem;
+}
+
+.support-note {
+  margin: 0.85rem 0 0;
+  font-size: 0.82rem;
+  color: rgba(148, 163, 184, 0.95);
+}
 .btn-primary {
   background: linear-gradient(120deg, var(--accent), var(--accent-strong));
   color: #0b1120;
@@ -818,6 +886,10 @@ textarea {
   border-bottom-color: rgba(209, 213, 219, 0.9);
 }
 
+.is-light .brand-link:hover {
+  background: rgba(255, 255, 255, 0.65);
+}
+
 .is-light input,
 .is-light select,
 .is-light textarea {
@@ -879,6 +951,10 @@ textarea {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .support-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .smart-grid {
     grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
   }
@@ -919,6 +995,10 @@ textarea {
     display: inline-flex;
   }
 
+  .nav-support {
+    display: none;
+  }
+
   .hero {
     padding-top: 3rem;
   }
@@ -937,6 +1017,10 @@ textarea {
 
   .services-grid,
   .cases-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .support-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 

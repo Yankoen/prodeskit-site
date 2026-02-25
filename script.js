@@ -97,8 +97,20 @@ function initTheme() {
 
 function initNav() {
   const links = document.querySelectorAll('.nav-links a[href^="#"]');
+  const brandLink = document.querySelector('.brand-link[href^="#"]');
   const mobileToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
+
+  const scrollToTarget = (href) => {
+    const target = document.querySelector(href);
+    if (!target) return false;
+
+    const headerOffset = 72;
+    const rect = target.getBoundingClientRect();
+    const offsetTop = rect.top + window.scrollY - headerOffset + 4;
+    window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+    return true;
+  };
 
   links.forEach((link) => {
     link.addEventListener('click', (event) => {
@@ -115,15 +127,8 @@ function initNav() {
         }
       }
 
-      const target = document.querySelector(href);
-      if (!target) return;
-
       event.preventDefault();
-      const headerOffset = 72;
-      const rect = target.getBoundingClientRect();
-      const offsetTop = rect.top + window.scrollY - headerOffset + 4;
-
-      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+      scrollToTarget(href);
 
       if (navLinks && mobileToggle && navLinks.classList.contains('is-open')) {
         navLinks.classList.remove('is-open');
@@ -131,6 +136,15 @@ function initNav() {
       }
     });
   });
+
+  if (brandLink) {
+    brandLink.addEventListener('click', (event) => {
+      const href = brandLink.getAttribute('href');
+      if (!href || !href.startsWith('#')) return;
+      event.preventDefault();
+      scrollToTarget(href);
+    });
+  }
 
   if (mobileToggle && navLinks) {
     mobileToggle.addEventListener('click', () => {

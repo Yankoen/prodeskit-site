@@ -17,18 +17,67 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div id="top" aria-hidden="true"></div>
     <header class="site-header">
       <div class="container header-inner">
-        <div class="brand">
-          <div class="brand-mark">
-            <span class="brand-mark-main">PD</span>
-            <span class="brand-mark-sub">it</span>
+        <a class="brand brand-link" href="#top" aria-label="Terug naar voorpagina">
+          <div class="brand-mark" aria-hidden="true">
+            <svg
+              class="brand-logo"
+              width="44"
+              height="44"
+              viewBox="0 0 44 44"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs>
+                <linearGradient
+                  id="pdGradient"
+                  x1="6"
+                  y1="4"
+                  x2="38"
+                  y2="40"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#22c55e" />
+                  <stop offset="0.55" stop-color="#38bdf8" />
+                  <stop offset="1" stop-color="#4f46e5" />
+                </linearGradient>
+              </defs>
+              <circle cx="22" cy="22" r="20" fill="url(#pdGradient)" />
+              <circle
+                cx="22"
+                cy="22"
+                r="18"
+                fill="rgba(15, 23, 42, 0.92)"
+                stroke="rgba(229, 231, 235, 0.22)"
+                stroke-width="1"
+              />
+              <path
+                d="M12.5 25.2c2.8-4.3 6.1-6.4 9.8-6.4 3.3 0 5.7 1.5 7.2 4.6 1.1 2.2 2.9 3.3 5.3 3.3"
+                stroke="#e5e7eb"
+                stroke-opacity="0.9"
+                stroke-width="2.2"
+                stroke-linecap="round"
+              />
+              <circle cx="12.5" cy="25.2" r="2.2" fill="#22c55e" />
+              <circle cx="34.8" cy="26.7" r="2.2" fill="#38bdf8" />
+              <path
+                d="M30.2 14.6h5.6v6.2h-5.6z"
+                fill="#e5e7eb"
+                fill-opacity="0.92"
+              />
+              <path
+                d="M31.4 16.2h3.2v3h-3.2z"
+                fill="rgba(15, 23, 42, 0.92)"
+              />
+            </svg>
           </div>
           <div class="brand-text">
             <span class="brand-name">ProDesk IT</span>
-            <span class="brand-tagline">Slimme IT door Yannick Koenen</span>
+            <span class="brand-tagline">Klantgericht. Snel. Transparant.</span>
           </div>
-        </div>
+        </a>
         <nav class="nav">
           <button
             class="nav-toggle"
@@ -39,10 +88,14 @@
           </button>
           <ul class="nav-links">
             <li><a href="#services">Diensten</a></li>
+            <li><a href="#support">Support</a></li>
             <li><a href="#smart">Slimme aanpak</a></li>
             <li><a href="#cases">Cases</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
+          <a href="#support" class="btn btn-secondary btn-small nav-support"
+            >Support</a
+          >
           <button id="theme-toggle" class="theme-toggle" aria-label="Schakel thema">
             <span class="theme-toggle-icon">☾</span>
           </button>
@@ -298,6 +351,58 @@
                 waardevol op locatie, implementatie gebeurt meestal remote.
               </div>
             </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="support" class="section">
+        <div class="container">
+          <header class="section-header">
+            <h2>Support op afstand</h2>
+            <p>
+              We houden het simpel: duidelijke afspraken, snelle opvolging en
+              ondersteuning alsof we naast je zitten.
+            </p>
+          </header>
+
+          <div class="grid support-grid">
+            <article class="card">
+              <h3>Zo werken wij (klantgericht)</h3>
+              <p class="muted">
+                Bij ProDesk IT staat jouw ervaring centraal. We communiceren helder,
+                nemen je stap voor stap mee en lossen het probleem op zonder onnodig
+                gedoe.
+              </p>
+              <ul class="support-list">
+                <li>We luisteren eerst, dan pas uitvoeren</li>
+                <li>Duidelijke uitleg in normale taal</li>
+                <li>Veilig en netjes: alleen wat nodig is</li>
+                <li>Snelle terugkoppeling en afspraken nakomen</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <h3>TeamViewer downloaden</h3>
+              <p class="muted">
+                Voor snelle hulp op afstand gebruiken we TeamViewer. Download,
+                installeer, en stuur je ID + wachtwoord door tijdens het contact.
+              </p>
+              <div class="support-actions">
+                <a
+                  class="btn btn-primary"
+                  href="https://www.teamviewer.com/download/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Download TeamViewer
+                </a>
+                <a class="btn btn-ghost" href="#contact">Contact opnemen</a>
+              </div>
+              <p class="support-note">
+                Tip: Heb je Windows? Kies in TeamViewer voor “Installeren” zodat we
+                het stabiel kunnen gebruiken tijdens support.
+              </p>
+            </article>
           </div>
         </div>
       </section>
