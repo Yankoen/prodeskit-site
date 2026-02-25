@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ProDeskIT – Slimme IT-oplossingen door Yannick Koenen</title>
+    <meta
+      name="description"
+      content="ProDeskIT helpt MKB en professionals met slimme, pragmatische IT-oplossingen, automatisering en AI-workflows. Opgericht door Yannick Koenen."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="brand-mark">P</div>
+          <div class="brand-text">
+            <span class="brand-name">ProDeskIT</span>
+            <span class="brand-tagline">Slimme IT door Yannick Koenen</span>
+          </div>
+        </div>
+        <nav class="nav">
+          <button
+            class="nav-toggle"
+            aria-label="Menu openen"
+            aria-expanded="false"
+          >
+            <span></span><span></span>
+          </button>
+          <ul class="nav-links">
+            <li><a href="#services">Diensten</a></li>
+            <li><a href="#smart">Slimme aanpak</a></li>
+            <li><a href="#cases">Cases</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Schakel thema">
+            <span class="theme-toggle-icon">☾</span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1>
+              Slimme IT-oplossingen
+              <span class="accent">zonder ruis</span>
+            </h1>
+            <p class="hero-lead">
+              ProDeskIT helpt je bedrijfsprocessen automatiseren, slimmer werken met
+              data en AI, en IT weer overzichtelijk maken. Gericht op het MKB en
+              professionals die geen tijd hebben voor gedoe.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Plan een kennismaking</a>
+              <a href="#smart" class="btn btn-ghost">Ontdek de slimme aanpak</a>
+            </div>
+            <dl class="hero-metrics">
+              <div>
+                <dt>Respons binnen</dt>
+                <dd>&lt; 24 uur</dd>
+              </div>
+              <div>
+                <dt>Gem. tijdswinst</dt>
+                <dd>3–8 uur / week</dd>
+              </div>
+              <div>
+                <dt>Focust op</dt>
+                <dd>praktische resultaten</dd>
+              </div>
+            </dl>
+          </div>
+          <aside class="hero-panel" aria-label="Slimme ProDeskIT scan">
+            <h2>Snelle ProDeskIT-scan</h2>
+            <p class="hero-panel-sub">
+              Beantwoord 3 vragen en zie welk type oplossing het beste past.
+            </p>
+            <form id="advisor-form" class="advisor-form">
+              <label class="field">
+                <span>Wat is op dit moment je grootste uitdaging?</span>
+                <select name="pain" required>
+                  <option value="">Maak een keuze…</option>
+                  <option value="chaos">Te veel losse tools &amp; chaos</option>
+                  <option value="tijd">Te veel handmatig werk / tijdsdruk</option>
+                  <option value="data">Geen inzicht in data &amp; voortgang</option>
+                  <option value="ai">
+                    AI gebruiken, maar niet weten waar te beginnen
+                  </option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Hoeveel medewerkers gebruiken deze processen?</span>
+                <select name="size" required>
+                  <option value="">Maak een keuze…</option>
+                  <option value="solo">Alleen ikzelf</option>
+                  <option value="small">2–10</option>
+                  <option value="medium">11–50</option>
+                  <option value="large">50+</option>
+                </select>
+              </label>
+              <label class="field">
+                <span>Wat is je voorkeur?</span>
+                <select name="preference" required>
+                  <option value="">Maak een keuze…</option>
+                  <option value="advies">
+                    Eerst strategisch advies, dan implementatie
+                  </option>
+                  <option value="snel">Zo snel mogelijk iets dat werkt</option>
+                  <option value="stap">In kleine stappen verbeteren</option>
+                </select>
+              </label>
+              <button type="submit" class="btn btn-secondary">
+                Toon voorstel
+              </button>
+            </form>
+            <div id="advisor-result" class="advisor-result" aria-live="polite"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="container">
+          <header class="section-header">
+            <h2>Diensten van ProDeskIT</h2>
+            <p>
+              Yannick combineert hands-on IT-ervaring met een pragmatische blik op
+              jouw business. Geen dikke rapporten, wel oplossingen die draaien.
+            </p>
+          </header>
+          <div class="grid services-grid">
+            <article class="card service">
+              <h3>Automatisering &amp; workflowdesign</h3>
+              <p>
+                Van terugkerende taken tot complexe processen: we analyseren waar de
+                tijd lekt en ontwerpen slimmere workflows met de juiste tools.
+              </p>
+              <ul>
+                <li>Procesanalyse en verbeterplan</li>
+                <li>Koppelingen tussen bestaande systemen</li>
+                <li>No-code / low-code automatisering</li>
+              </ul>
+            </article>
+            <article class="card service">
+              <h3>AI in de praktijk</h3>
+              <p>
+                Concreet aan de slag met AI: van tekst- en rapportgeneratie tot
+                slimme assistenten voor interne teams.
+              </p>
+              <ul>
+                <li>Use case-verkenning en haalbaarheid</li>
+                <li>Proof-of-concepts en pilots</li>
+                <li>Training van jou en je team</li>
+              </ul>
+            </article>
+            <article class="card service">
+              <h3>IT-advies &amp; second opinion</h3>
+              <p>
+                Een technisch geweten dat met je meedenkt. Onafhankelijk advies bij
+                keuzes voor nieuwe software, infrastructuur of leveranciers.
+              </p>
+              <ul>
+                <li>Architectuur- en inrichtingsadvies</li>
+                <li>Roadmap voor de komende 6–12 maanden</li>
+                <li>Begeleiding bij implementatie</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="smart" class="section section-alt">
+        <div class="container smart-grid">
+          <div>
+            <header class="section-header align-left">
+              <h2>Wat maakt ProDeskIT “slim”?</h2>
+              <p>
+                Slim betekent niet “zo ingewikkeld mogelijk”. Het betekent: de
+                juiste dingen automatiseren en de rest eenvoudig houden.
+              </p>
+            </header>
+            <ul class="smart-list">
+              <li>
+                <span class="smart-label">Evidence first</span>
+                <p>
+                  Start met kleine experimenten en echte data in plaats van dikke
+                  plannen. Werkt iets? Dan schalen we op.
+                </p>
+              </li>
+              <li>
+                <span class="smart-label">Mensen &gt; technologie</span>
+                <p>
+                  Oplossingen moeten door jouw team gedragen worden. Vandaar veel
+                  aandacht voor UX, uitleg en overdracht.
+                </p>
+              </li>
+              <li>
+                <span class="smart-label">Meetbare impact</span>
+                <p>
+                  Vooraf bepalen we welke tijdswinst of foutreductie we nastreven.
+                  Vervolgens meten we of dat ook echt lukt.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <aside class="smart-aside">
+            <h3>Over Yannick Koenen</h3>
+            <p>
+              Yannick is de oprichter van ProDeskIT en helpt organisaties hun IT
+              weer in lijn te brengen met hoe ze écht willen werken.
+            </p>
+            <p>
+              Met ervaring in zowel techniek als businesscommunicatie slaat hij de
+              brug tussen directie, operatie en IT-partners.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section id="cases" class="section">
+        <div class="container">
+          <header class="section-header">
+            <h2>Voorbeelden &amp; mini‑cases</h2>
+            <p>
+              Een greep uit typische trajecten. Volledige cases op aanvraag
+              verkrijgbaar.
+            </p>
+          </header>
+          <div class="grid cases-grid">
+            <article class="card case">
+              <h3>Servicebureau – 6 uur per week bespaard</h3>
+              <p>
+                Intake, planning en terugkoppeling werden grotendeels handmatig
+                gedaan. Door slimme formulieren, automatische statusupdates en
+                dashboarding bespaart het team nu wekelijks uren.
+              </p>
+            </article>
+            <article class="card case">
+              <h3>Consultancy – AI voor rapportages</h3>
+              <p>
+                Consultants spendeerden veel tijd aan het samenvatten van
+                gesprekken en rapporteren. Met een op maat ingerichte AI‑workflow
+                is de doorlooptijd per rapport sterk verlaagd.
+              </p>
+            </article>
+            <article class="card case">
+              <h3>Tech scale‑up – second opinion IT‑landschap</h3>
+              <p>
+                Snel gegroeid, veel losse tools. Yannick bracht het landschap in
+                kaart, adviseerde over saneren en prioriteerde verbeteringen.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section section-alt">
+        <div class="container">
+          <header class="section-header">
+            <h2>Veelgestelde vragen</h2>
+            <p>Korte, eerlijke antwoorden. Geen verkooppraatjes.</p>
+          </header>
+          <div class="accordion" data-accordion>
+            <button class="accordion-item" type="button">
+              <span>Werk je alleen of met een team?</span>
+              <span class="accordion-icon">+</span>
+              <div class="accordion-panel">
+                Meestal werk je direct met Yannick. Waar nodig schakelt hij
+                gespecialiseerde partners in, bijvoorbeeld voor development op
+                grotere schaal.
+              </div>
+            </button>
+            <button class="accordion-item" type="button">
+              <span>Hoe snel kun je starten?</span>
+              <span class="accordion-icon">+</span>
+              <div class="accordion-panel">
+                Vaak is er binnen één tot twee weken ruimte voor een eerste sessie.
+                Voor spoedvragen is soms sneller mogelijk.
+              </div>
+            </button>
+            <button class="accordion-item" type="button">
+              <span>Werk je op locatie of remote?</span>
+              <span class="accordion-icon">+</span>
+              <div class="accordion-panel">
+                Beide is mogelijk. Strategische sessies en workshops zijn vaak
+                waardevol op locatie, implementatie gebeurt meestal remote.
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section section-contact">
+        <div class="container contact-grid">
+          <div>
+            <header class="section-header align-left">
+              <h2>Plan een vrijblijvend gesprek</h2>
+              <p>
+                Vertel kort waar je tegenaan loopt. Yannick denkt vrijblijvend met
+                je mee en geeft een eerlijk beeld van de mogelijkheden.
+              </p>
+            </header>
+            <ul class="contact-highlights">
+              <li>Online kennismaking van 30–45 minuten</li>
+              <li>Concreet voorstel of volgende stap binnen enkele dagen</li>
+              <li>Geen verplichtingen, wel duidelijkheid</li>
+            </ul>
+          </div>
+          <form
+            id="contact-form"
+            class="card contact-form"
+            autocomplete="on"
+            novalidate
+          >
+            <div class="field">
+              <label for="name">Naam</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Je naam"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="email">E‑mail</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="naam@bedrijf.nl"
+                required
+              />
+            </div>
+            <div class="field">
+              <label for="company">Organisatie (optioneel)</label>
+              <input
+                type="text"
+                id="company"
+                name="company"
+                placeholder="Bedrijfsnaam"
+              />
+            </div>
+            <div class="field">
+              <label for="message">Waar loop je nu tegenaan?</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Beschrijf kort je situatie of vraag."
+                required
+              ></textarea>
+            </div>
+            <div class="field">
+              <label for="budget">Indicatie van je budget (optioneel)</label>
+              <select id="budget" name="budget">
+                <option value="">Geen indicatie</option>
+                <option value="start">Tot € 2.500</option>
+                <option value="grow">€ 2.500 – € 10.000</option>
+                <option value="scale">Boven € 10.000</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary full-width">
+              Verstuur bericht
+            </button>
+            <p id="contact-status" class="contact-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <div
+      id="flappy-overlay"
+      class="flappy-overlay"
+      aria-hidden="true"
+      role="dialog"
+      aria-label="Flappy Bird spel"
+    >
+      <div class="flappy-inner">
+        <header class="flappy-header">
+          <h2>ProDeskIT Flappy Bird</h2>
+          <button
+            type="button"
+            class="flappy-close"
+            aria-label="Sluit spel"
+          >
+            ×
+          </button>
+        </header>
+        <p class="flappy-instructions">
+          Druk op spatie of klik/tap in het speelveld om te vliegen.
+          <span class="flappy-instructions-sub">
+            ESC of het kruisje sluit het spel en brengt je terug naar de site.
+          </span>
+          <span class="flappy-instructions-sub">
+            Je verdient coins met je score. Druk op C om skins te wisselen of te kopen.
+          </span>
+        </p>
+        <div class="flappy-canvas-wrap">
+          <canvas
+            id="flappy-canvas"
+            width="480"
+            height="640"
+          ></canvas>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year"></span> ProDeskIT – Yannick Koenen</p>
+        <p class="footer-meta">
+          Gemaakt met oog voor eenvoud, snelheid en privacy.
+        </p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
